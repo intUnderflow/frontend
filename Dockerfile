@@ -1,7 +1,11 @@
 ARG base_image=ghcr.io/alphagov/govuk-ruby-base:2.7.6
 ARG builder_image=ghcr.io/alphagov/govuk-ruby-builder:2.7.6
- 
+
 FROM $builder_image AS builder
+
+RUN apt-get update -qy && \
+    apt-get upgrade -y && \
+    apt-get install -y build-essential nodejs git
 
 RUN mkdir /app
 
