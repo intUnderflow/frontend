@@ -35,6 +35,13 @@
     method: "post",
   ) do | form | %>
 
+    <%
+      #TODO: Add a visually hideen legend option to the fieldset component; then
+      #      the component can be used here.
+      if defined? @component_stylesheets
+        @component_stylesheets.add_stylesheet("fieldset")
+      end
+    %>
     <fieldset class="govuk-fieldset">
       <legend class=" govuk-fieldset__legend govuk-visually-hidden"><%= t('formats.local_transaction.postcode_lookup') %></legend>
 
@@ -52,9 +59,9 @@
         autocomplete: "postal-code",
       } %>
 
-      <%= render "govuk_publishing_components/components/button", 
-        text: "Find", 
-        margin_bottom: true 
+      <%= render "govuk_publishing_components/components/button",
+        text: "Find",
+        margin_bottom: true
       %>
 
       <%= tag.p link_to(t('formats.local_transaction.find_postcode_royal_mail'),
@@ -62,7 +69,7 @@
         id: 'postcode-finder-link',
         class: "govuk-link",
         rel: "external"),
-        class: "govuk-body" 
+        class: "govuk-body"
       %>
     </fieldset>
   <% end %>
