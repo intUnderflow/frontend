@@ -1,7 +1,11 @@
 <%
-title ||= nil
-year ||= nil
-events ||= []
+  if defined? @individual_stylesheets
+    @individual_stylesheets.add_component("calendar")
+  end
+
+  title ||= nil
+  year ||= nil
+  events ||= []
 %>
 
 <div class="app-c-calendar">
