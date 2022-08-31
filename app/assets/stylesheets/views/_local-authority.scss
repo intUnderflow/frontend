@@ -1,3 +1,5 @@
+@import "govuk_publishing_components/govuk_frontend_support";
+
 hr.separator { // stylelint-disable-line selector-no-qualifying-type
   color: $govuk-border-colour;
   border-style: solid;
