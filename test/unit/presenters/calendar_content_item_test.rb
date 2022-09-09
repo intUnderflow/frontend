@@ -13,7 +13,7 @@ class CalendarContentItemTest < ActiveSupport::TestCase
 
   def content_item(slug: nil)
     calendar = Calendar.find("bank-holidays")
-    CalendarContentItem.new(calendar, slug: slug)
+    CalendarContentItem.new(calendar, slug:)
   end
 
   def test_english_payload_contains_correct_data

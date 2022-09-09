@@ -29,8 +29,8 @@ module LocationHelpers
 
     stub_local_links_manager_has_a_link(
       authority_slug: authority,
-      lgsl: lgsl,
-      lgil: lgil,
+      lgsl:,
+      lgil:,
       url: "http://www.westminster.gov.uk/bear-the-cost-of-grizzly-ownership-2016-update",
       country_name: "England",
       status: "ok",

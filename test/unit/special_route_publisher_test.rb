@@ -14,7 +14,7 @@ class SpecialRoutePublisherTest < ActiveSupport::TestCase
 
     @publisher = SpecialRoutePublisher.new(
       publishing_api: @publishing_api,
-      logger: logger,
+      logger:,
     )
   end
 
